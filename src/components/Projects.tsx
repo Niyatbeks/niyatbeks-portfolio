@@ -1,35 +1,34 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
-
-const projects = [
-  {
-    title: "🍔 Food Website",
-    description: "An online food ordering platform featuring modern UI and responsive design.",
-    liveUrl: "https://medical-assistance-by-niyatbeks.vercel.app/",
-    sourceUrl: "https://github.com/Niyatbeks/medical-assistance",
-    gradient: "from-orange-400 to-red-500"
-  },
-  {
-    title: "💫 Whirl Website",
-    description: "A sleek landing page designed with CSS animations and reusable components.",
-    liveUrl: "https://whirl-website-by-niyatbeks.vercel.app/",
-    sourceUrl: "https://github.com/Niyatbeks/Whirl-website",
-    gradient: "from-blue-400 to-purple-500"
-  }
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Projects = () => {
+  const { t } = useLanguage();
+  
+  const projects = [
+    {
+      title: `🍔 ${t.projects.foodWebsite.title}`,
+      description: t.projects.foodWebsite.description,
+      liveUrl: "https://medical-assistance-by-niyatbeks.vercel.app/",
+      sourceUrl: "https://github.com/Niyatbeks/medical-assistance",
+      gradient: "from-orange-400 to-red-500"
+    },
+    {
+      title: `💫 ${t.projects.whirlWebsite.title}`,
+      description: t.projects.whirlWebsite.description,
+      liveUrl: "https://whirl-website-by-niyatbeks.vercel.app/",
+      sourceUrl: "https://github.com/Niyatbeks/Whirl-website",
+      gradient: "from-blue-400 to-purple-500"
+    }
+  ];
   return (
     <section id="projects" className="py-24 px-6 bg-gradient-to-b from-background to-muted/30">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Featured <span className="gradient-text">Projects</span>
+            {t.projects.title}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Here are some of my recent works showcasing my skills in frontend development.
-          </p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
@@ -52,7 +51,7 @@ const Projects = () => {
                     onClick={() => window.open(project.liveUrl, '_blank')}
                   >
                     <ExternalLink className="mr-2 h-4 w-4" />
-                    Live Demo
+                    {t.projects.liveDemo}
                   </Button>
                   <Button 
                     variant="outline"
@@ -60,7 +59,7 @@ const Projects = () => {
                     onClick={() => window.open(project.sourceUrl, '_blank')}
                   >
                     <Github className="mr-2 h-4 w-4" />
-                    Source Code
+                    {t.projects.sourceCode}
                   </Button>
                 </div>
               </CardContent>

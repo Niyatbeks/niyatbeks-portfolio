@@ -4,10 +4,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Send, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -27,8 +29,8 @@ const Contact = () => {
     }
 
     toast({
-      title: "Message Sent! 🎉",
-      description: "Thank you for reaching out. I'll get back to you soon!",
+      title: t.contact.form.success,
+      description: t.contact.form.successDescription,
     });
     
     setFormData({ name: "", email: "", message: "" });
@@ -38,11 +40,11 @@ const Contact = () => {
     <section id="contact" className="py-24 px-6 bg-gradient-to-b from-muted/30 to-background">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Let's <span className="gradient-text">Connect</span> 💬
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            {t.contact.title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or just want to chat? Feel free to reach out!
+            {t.contact.description}
           </p>
         </div>
         
@@ -54,15 +56,12 @@ const Contact = () => {
                 <MessageCircle className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Telegram</h3>
-              <p className="text-muted-foreground mb-6 text-sm">
-                Best way to reach me instantly
-              </p>
               <Button 
-                className="w-full bg-gradient-to-r from-secondary to-primary hover:shadow-glow transition-all duration-300"
+                className="w-full bg-gradient-to-r from-secondary to-primary hover:shadow-glow transition-all duration-300 mt-4"
                 onClick={() => window.open('https://t.me/niyatbeks', '_blank')}
               >
                 <MessageCircle className="mr-2 h-4 w-4" />
-                @niyatbeks
+                {t.contact.telegram}
               </Button>
             </CardContent>
           </Card>
@@ -73,11 +72,11 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
-                    Name
+                    {t.contact.form.name}
                   </label>
                   <Input 
                     id="name"
-                    placeholder="Your name"
+                    placeholder={t.contact.form.name}
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="glass-card border-border/50"
@@ -86,12 +85,12 @@ const Contact = () => {
                 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email
+                    {t.contact.form.email}
                   </label>
                   <Input 
                     id="email"
                     type="email"
-                    placeholder="your.email@example.com"
+                    placeholder={t.contact.form.email}
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="glass-card border-border/50"
@@ -100,11 +99,11 @@ const Contact = () => {
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Message
+                    {t.contact.form.message}
                   </label>
                   <Textarea 
                     id="message"
-                    placeholder="Your message..."
+                    placeholder={t.contact.form.message}
                     rows={4}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -117,7 +116,7 @@ const Contact = () => {
                   className="w-full bg-gradient-to-r from-secondary via-primary to-accent hover:shadow-glow transition-all duration-300"
                 >
                   <Send className="mr-2 h-4 w-4" />
-                  Send Message
+                  {t.contact.form.submit}
                 </Button>
               </form>
             </CardContent>

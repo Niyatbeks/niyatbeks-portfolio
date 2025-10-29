@@ -1,26 +1,25 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-
-const currentSkills = [
-  { name: "HTML", level: 90 },
-  { name: "CSS", level: 85 },
-  { name: "JavaScript", level: 80 },
-  { name: "React", level: 75 }
-];
-
-const learningSkills = ["TypeScript", "Next.js", "UI/UX Design", "Tailwind CSS"];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Skills = () => {
+  const { t } = useLanguage();
+  
+  const currentSkills = [
+    { name: "HTML", level: 90 },
+    { name: "CSS", level: 85 },
+    { name: "JavaScript", level: 80 },
+    { name: "React", level: 75 }
+  ];
+
+  const learningSkills = ["TypeScript", "Next.js", "UI/UX Design", "Tailwind CSS"];
   return (
     <section id="skills" className="py-24 px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Skills & <span className="gradient-text">Goals</span>
+            {t.skills.title}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            My current expertise and what I'm learning to grow as a developer.
-          </p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
@@ -29,7 +28,7 @@ const Skills = () => {
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <span className="text-3xl">💻</span>
-                Current Skills
+                {t.skills.currentSkills}
               </h3>
               <div className="space-y-6">
                 {currentSkills.map((skill) => (
@@ -55,11 +54,8 @@ const Skills = () => {
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <span className="text-3xl">🎯</span>
-                Learning Goals
+                {t.skills.learningGoals}
               </h3>
-              <p className="text-muted-foreground mb-6">
-                Technologies and concepts I'm currently exploring to expand my skill set:
-              </p>
               <div className="flex flex-wrap gap-3">
                 {learningSkills.map((skill) => (
                   <Badge 

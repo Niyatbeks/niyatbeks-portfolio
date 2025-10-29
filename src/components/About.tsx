@@ -1,22 +1,18 @@
+import { useLanguage } from "@/contexts/LanguageContext";
 import aboutImage from "@/assets/about-illustration.jpg";
 
 const About = () => {
+  const { t } = useLanguage();
   return (
     <section id="about" className="py-24 px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              About <span className="gradient-text">Me</span>
+              {t.about.title}
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              I'm a frontend development student learning HTML, CSS, JavaScript, and React. 
-              I love turning creative ideas into responsive and user-friendly web applications.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Currently exploring the world of web development, focusing on creating 
-              beautiful interfaces and seamless user experiences. Every project is an 
-              opportunity to learn something new and push my skills further.
+              {t.about.description}
             </p>
           </div>
           

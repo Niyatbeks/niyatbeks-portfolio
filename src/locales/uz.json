@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "greeting": "Salom, men Niyatbekman 👋",
+    "title": "Frontend Dasturchi va Talaba",
+    "subtitle": "Zamonaviy va toza veb-saytlar yaratishga ishtiyoqli",
+    "viewProjects": "Loyihalarni Ko'rish",
+    "contactMe": "Bog'lanish",
+    "scrollExplore": "Pastga suring"
+  },
+  "about": {
+    "title": "Men Haqimda",
+    "description": "Men HTML, CSS, JavaScript va React-ni o'rganayotgan frontend dasturlash talabasiman. Ijodiy g'oyalarni javob beruvchi va foydalanuvchilarga qulay veb-ilovalarga aylantirishni yaxshi ko'raman.",
+    "currentLearning": "Hozir O'rganayotganlar",
+    "futureGoals": "Kelajakdagi Maqsadlar"
+  },
+  "projects": {
+    "title": "Taniqli Loyihalar",
+    "foodWebsite": {
+      "title": "Ovqat Veb-sayti",
+      "description": "Zamonaviy interfeys va javob beruvchi dizayn bilan onlayn ovqat buyurtma qilish platformasi."
+    },
+    "whirlWebsite": {
+      "title": "Whirl Veb-sayti",
+      "description": "CSS animatsiyalari va qayta foydalanish mumkin bo'lgan komponentlar bilan yaratilgan zamonaviy landing page."
+    },
+    "liveDemo": "Jonli Demo",
+    "sourceCode": "Manba Kodi"
+  },
+  "skills": {
+    "title": "Ko'nikmalar va O'rganish Yo'li",
+    "currentSkills": "Hozirgi Ko'nikmalar",
+    "learningGoals": "O'rganish Maqsadlari"
+  },
+  "contact": {
+    "title": "Keling Bog'lanaylik 💬",
+    "description": "Men har doim yangi loyihalar, hamkorlik yoki texnologiya haqida suhbatlashishga tayyorman. Menga Telegram orqali yoki quyidagi shakl orqali murojaat qiling!",
+    "telegram": "Telegram orqali bog'lanish",
+    "sendMessage": "Xabar Yuborish",
+    "form": {
+      "name": "Ismingiz",
+      "email": "Emailingiz",
+      "message": "Xabaringiz",
+      "submit": "Xabar Yuborish",
+      "success": "Xabar muvaffaqiyatli yuborildi!",
+      "successDescription": "Tez orada sizga javob beraman."
+    }
+  },
+  "footer": {
+    "builtWith": "❤️ va React bilan qurilgan"
+  }
+}
