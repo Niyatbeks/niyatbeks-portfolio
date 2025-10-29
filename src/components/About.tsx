@@ -17,7 +17,7 @@ const About = () => {
           </div>
           
           <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <div className="glass-card rounded-3xl p-2 shadow-elegant">
+            <div className="bg-card border border-card-border rounded-3xl p-2 shadow-elegant hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1">
               <img 
                 src={aboutImage} 
                 alt="Developer workspace" 

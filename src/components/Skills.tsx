@@ -24,7 +24,7 @@ const Skills = () => {
         
         <div className="grid md:grid-cols-2 gap-8">
           {/* Current Skills */}
-          <Card className="glass-card border-0 shadow-elegant animate-slide-up">
+          <Card className="bg-card border border-card-border shadow-card hover:shadow-card-hover transition-all duration-300 animate-slide-up">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <span className="text-3xl">💻</span>
@@ -50,7 +50,7 @@ const Skills = () => {
           </Card>
           
           {/* Learning Goals */}
-          <Card className="glass-card border-0 shadow-elegant animate-slide-up" style={{ animationDelay: '0.2s' }}>
+          <Card className="bg-card border border-card-border shadow-card hover:shadow-card-hover transition-all duration-300 animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <span className="text-3xl">🎯</span>

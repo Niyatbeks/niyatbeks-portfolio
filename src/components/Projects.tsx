@@ -35,7 +35,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={index}
-              className="glass-card border-0 hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 group animate-slide-up"
+              className="bg-card border border-card-border hover:border-primary/40 hover:shadow-card-hover transition-all duration-300 hover:-translate-y-2 group animate-slide-up"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <CardHeader>
@@ -55,7 +55,7 @@ const Projects = () => {
                   </Button>
                   <Button 
                     variant="outline"
-                    className="flex-1 glass-card border-border/50 hover:bg-white/80 transition-all duration-300"
+                    className="flex-1 bg-card border-card-border hover:bg-card-hover hover:border-primary/40 transition-all duration-300"
                     onClick={() => window.open(project.sourceUrl, '_blank')}
                   >
                     <Github className="mr-2 h-4 w-4" />

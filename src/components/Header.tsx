@@ -14,7 +14,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass-card border-b">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-card-border shadow-sm">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="text-xl font-bold gradient-text">Niyatbek</div>
         

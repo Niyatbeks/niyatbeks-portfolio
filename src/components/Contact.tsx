@@ -50,7 +50,7 @@ const Contact = () => {
         
         <div className="grid md:grid-cols-5 gap-8">
           {/* Telegram Card */}
-          <Card className="glass-card border-0 shadow-elegant md:col-span-2 animate-slide-up">
+          <Card className="bg-card border border-card-border shadow-card hover:shadow-card-hover transition-all duration-300 md:col-span-2 animate-slide-up">
             <CardContent className="p-8 flex flex-col items-center text-center h-full justify-center">
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary to-primary flex items-center justify-center mb-4 shadow-glow">
                 <MessageCircle className="h-8 w-8 text-white" />
@@ -67,7 +67,7 @@ const Contact = () => {
           </Card>
           
           {/* Contact Form */}
-          <Card className="glass-card border-0 shadow-elegant md:col-span-3 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+          <Card className="bg-card border border-card-border shadow-card hover:shadow-card-hover transition-all duration-300 md:col-span-3 animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -79,7 +79,7 @@ const Contact = () => {
                     placeholder={t.contact.form.name}
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="glass-card border-border/50"
+                    className="bg-input border-card-border focus:border-primary transition-colors"
                   />
                 </div>
                 
@@ -93,7 +93,7 @@ const Contact = () => {
                     placeholder={t.contact.form.email}
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="glass-card border-border/50"
+                    className="bg-input border-card-border focus:border-primary transition-colors"
                   />
                 </div>
                 
@@ -107,7 +107,7 @@ const Contact = () => {
                     rows={4}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="glass-card border-border/50 resize-none"
+                    className="bg-input border-card-border focus:border-primary transition-colors resize-none"
                   />
                 </div>
                 

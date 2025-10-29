@@ -8,90 +8,116 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 25% 98%;
-    --foreground: 230 25% 15%;
+    --background: 215 25% 97%;
+    --foreground: 222 30% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 230 25% 15%;
+    --card-foreground: 222 30% 15%;
+    --card-border: 215 20% 90%;
+    --card-hover: 0 0% 98%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 230 25% 15%;
+    --popover-foreground: 222 30% 15%;
 
-    --primary: 250 75% 60%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 250 85% 70%;
+    --primary-glow: 217 91% 70%;
 
-    --secondary: 210 60% 55%;
+    --secondary: 195 85% 55%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 15% 92%;
-    --muted-foreground: 230 10% 50%;
+    --muted: 215 20% 94%;
+    --muted-foreground: 222 15% 45%;
 
-    --accent: 270 70% 65%;
+    --accent: 199 89% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 70% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 90%;
-    --ring: 250 75% 60%;
+    --border: 215 20% 88%;
+    --input: 215 20% 92%;
+    --ring: 217 91% 60%;
 
     --radius: 1rem;
 
+    /* Box/Card specific colors */
+    --box-bg: 0 0% 100%;
+    --box-bg-hover: 217 91% 98%;
+    --box-border: 215 20% 92%;
+    --box-border-hover: 217 70% 85%;
+    --box-accent: 217 91% 60%;
+    --box-shadow: 217 91% 60% / 0.08;
+    --box-shadow-hover: 217 91% 60% / 0.15;
+
     /* Custom gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(210 60% 55%) 0%, hsl(250 75% 60%) 50%, hsl(270 70% 65%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(220 25% 98%) 0%, hsl(220 20% 96%) 100%);
-    --gradient-card: linear-gradient(135deg, hsla(0 0% 100% / 0.8) 0%, hsla(0 0% 100% / 0.6) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(195 85% 55%) 0%, hsl(217 91% 60%) 50%, hsl(199 89% 48%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(215 25% 97%) 0%, hsl(215 20% 95%) 100%);
+    --gradient-card: linear-gradient(135deg, hsla(0 0% 100% / 0.95) 0%, hsla(217 91% 99% / 0.8) 100%);
+    --gradient-card-hover: linear-gradient(135deg, hsla(217 91% 98% / 0.95) 0%, hsla(217 91% 96% / 0.9) 100%);
     
     /* Shadows */
-    --shadow-elegant: 0 10px 40px -10px hsl(250 75% 60% / 0.15);
-    --shadow-card: 0 4px 20px -4px hsl(230 25% 15% / 0.08);
-    --shadow-glow: 0 0 40px hsl(250 85% 70% / 0.3);
+    --shadow-elegant: 0 8px 32px -8px hsl(217 91% 60% / 0.12);
+    --shadow-card: 0 2px 16px -2px hsl(222 30% 15% / 0.06);
+    --shadow-card-hover: 0 12px 40px -8px hsl(217 91% 60% / 0.18);
+    --shadow-glow: 0 0 32px hsl(217 91% 70% / 0.4);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 230 25% 12%;
-    --foreground: 220 20% 95%;
+    --background: 222 47% 11%;
+    --foreground: 215 20% 95%;
 
-    --card: 230 20% 15%;
-    --card-foreground: 220 20% 95%;
+    --card: 222 40% 16%;
+    --card-foreground: 215 20% 95%;
+    --card-border: 222 35% 24%;
+    --card-hover: 222 40% 18%;
 
-    --popover: 230 20% 15%;
-    --popover-foreground: 220 20% 95%;
+    --popover: 222 40% 16%;
+    --popover-foreground: 215 20% 95%;
 
-    --primary: 250 75% 60%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 250 85% 70%;
+    --primary-glow: 217 91% 70%;
 
-    --secondary: 210 60% 50%;
+    --secondary: 195 85% 55%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 230 15% 20%;
-    --muted-foreground: 220 15% 65%;
+    --muted: 222 35% 20%;
+    --muted-foreground: 215 15% 65%;
 
-    --accent: 270 70% 60%;
+    --accent: 199 89% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 230 15% 25%;
-    --input: 230 15% 20%;
-    --ring: 250 75% 60%;
+    --border: 222 35% 24%;
+    --input: 222 35% 22%;
+    --ring: 217 91% 60%;
+
+    /* Box/Card specific colors - dark mode */
+    --box-bg: 222 40% 16%;
+    --box-bg-hover: 222 40% 19%;
+    --box-border: 222 35% 26%;
+    --box-border-hover: 217 70% 45%;
+    --box-accent: 217 91% 60%;
+    --box-shadow: 217 91% 60% / 0.2;
+    --box-shadow-hover: 217 91% 60% / 0.35;
 
     /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(210 60% 45%) 0%, hsl(250 75% 55%) 50%, hsl(270 70% 60%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(230 25% 12%) 0%, hsl(230 20% 15%) 100%);
-    --gradient-card: linear-gradient(135deg, hsla(230 20% 15% / 0.8) 0%, hsla(230 20% 18% / 0.6) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(195 85% 45%) 0%, hsl(217 91% 55%) 50%, hsl(199 89% 43%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(222 47% 11%) 0%, hsl(222 40% 14%) 100%);
+    --gradient-card: linear-gradient(135deg, hsla(222 40% 18% / 0.95) 0%, hsla(222 40% 16% / 0.8) 100%);
+    --gradient-card-hover: linear-gradient(135deg, hsla(222 40% 21% / 0.95) 0%, hsla(222 40% 19% / 0.9) 100%);
     
     /* Dark mode shadows */
-    --shadow-elegant: 0 10px 40px -10px hsl(250 75% 40% / 0.3);
-    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.4);
-    --shadow-glow: 0 0 40px hsl(250 85% 50% / 0.4);
+    --shadow-elegant: 0 8px 32px -8px hsl(217 91% 40% / 0.3);
+    --shadow-card: 0 2px 16px -2px hsl(0 0% 0% / 0.3);
+    --shadow-card-hover: 0 12px 40px -8px hsl(217 91% 50% / 0.4);
+    --shadow-glow: 0 0 32px hsl(217 91% 60% / 0.5);
   }
 }
 
@@ -117,8 +143,30 @@ All colors MUST be HSL.
   }
 
   .glass-card {
-    @apply backdrop-blur-md bg-white/70 border border-white/20;
+    background: hsl(var(--box-bg));
+    border: 1px solid hsl(var(--box-border));
     box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
+  }
+
+  .glass-card:hover {
+    background: hsl(var(--box-bg-hover));
+    border-color: hsl(var(--box-border-hover));
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-4px);
+  }
+
+  .modern-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--card-border));
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
+  }
+
+  .modern-card:hover {
+    background: hsl(var(--card-hover));
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
   }
 
   .animate-fade-in {

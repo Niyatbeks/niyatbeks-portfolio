@@ -23,7 +23,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <div className="mb-6">
-            <span className="inline-block px-4 py-2 rounded-full glass-card text-sm font-medium text-primary mb-4">
+            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary mb-4 transition-all hover:bg-primary/15">
               {t.hero.title}
             </span>
           </div>
@@ -49,7 +49,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               variant="outline"
-              className="glass-card hover:bg-white/80 transition-all duration-300 text-base px-8 py-6"
+              className="bg-card border-card-border hover:bg-card-hover hover:border-primary/40 transition-all duration-300 text-base px-8 py-6"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               {t.hero.contactMe}
