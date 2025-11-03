@@ -23,6 +23,10 @@
       "title": "Whirl Veb-sayti",
       "description": "CSS animatsiyalari va qayta foydalanish mumkin bo'lgan komponentlar bilan yaratilgan zamonaviy landing page."
     },
+    "smartTaskManager": {
+      "title": "SmartTask Manager",
+      "description": "React va Firebase bilan qurilgan veb-asosli samaradorlik ilovasi, foydalanuvchilarga kundalik vazifalarini samarali tashkil qilishda yordam beradi. Real vaqtda vazifalarni sinxronlash, qorong'u rejim va drag-and-drop vazifalarni tartibga solish."
+    },
     "liveDemo": "Jonli Demo",
     "sourceCode": "Manba Kodi"
   },

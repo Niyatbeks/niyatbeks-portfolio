@@ -20,6 +20,13 @@ const Projects = () => {
       liveUrl: "https://whirl-website-by-niyatbeks.vercel.app/",
       sourceUrl: "https://github.com/Niyatbeks/Whirl-website",
       gradient: "from-blue-400 to-purple-500"
+    },
+    {
+      title: `✅ ${t.projects.smartTaskManager.title}`,
+      description: t.projects.smartTaskManager.description,
+      liveUrl: "https://github.com/Niyatbek/SmartTaskManager",
+      sourceUrl: "https://github.com/Niyatbek/SmartTaskManager",
+      gradient: "from-emerald-400 to-teal-500"
     }
   ];
   return (

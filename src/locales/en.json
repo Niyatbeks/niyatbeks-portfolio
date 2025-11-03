@@ -23,6 +23,10 @@
       "title": "Whirl Website",
       "description": "A sleek landing page designed with CSS animations and reusable components."
     },
+    "smartTaskManager": {
+      "title": "SmartTask Manager",
+      "description": "A web-based productivity app built with React and Firebase that helps users organize their daily tasks efficiently. Features real-time task sync, dark mode, and drag-and-drop task organization."
+    },
     "liveDemo": "Live Demo",
     "sourceCode": "Source Code"
   },
